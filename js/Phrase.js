@@ -3,7 +3,11 @@
  * Phrase.js */
 
 class Phrase {
-    constructor() {
-        console.log("Phrase object instantiated");
+    constructor(phrase) {
+        this.phrase = phrase.toLowerCase();
+    }
+
+    addPhraseToDisplay() {
+        // TODO - page 8 Step 6
     }
 }
