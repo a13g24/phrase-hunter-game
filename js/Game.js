@@ -6,11 +6,11 @@ class Game {
     constructor() {
         this.missed = 0;
         this.phrases = [
-            {phrase: "Life is like a box of chocolates"},
-            {phrase: "When in Rome"},
-            {phrase: "Kill two birds with one stone"},
-            {phrase: "It's raining cats and dogs"},
-            {phrase: "It takes one to know one"}
+            new Phrase("Life is like a box of chocolates"),
+            new Phrase("When in Rome"),
+            new Phrase("Kill two birds with one stone"),
+            new Phrase("It's raining cats and dogs"),
+            new Phrase("It takes one to know one")
         ];
         this.activePhrase = null;
     }
@@ -20,6 +20,6 @@ class Game {
         const MAX = this.phrases.length;
         let index = Math.floor(Math.random() * (MAX - MIN) + MIN);
 
-        return this.phrases[index].phrase;
+        return this.phrases[index];
     }
 }

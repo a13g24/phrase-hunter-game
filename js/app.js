@@ -3,4 +3,6 @@
  * app.js */
 
 const game = new Game();
-const phrase = new Phrase(game.randomPhrase);
+console.log(game.randomPhrase.addPhraseToDisplay());
+
+// TODO - page 9

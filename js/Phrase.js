@@ -8,6 +8,23 @@ class Phrase {
     }
 
     addPhraseToDisplay() {
-        // TODO - page 8 Step 6
+        // init html block
+        let html = `<div id="phrase" class="section"><ul>`;
+
+        // split current phrase into an array (including spaces)
+        let phraseArr = this.phrase.split("");
+
+        // parse the array
+        phraseArr.forEach(element => {
+            if (element == " ") {
+                html += `<li class="space"></li>`;
+            } else {
+                html += `<li class="hide letter ${element}">${element}</li>`;
+            }
+        });
+
+        html += `</ul></div>`;
+
+        return html;
     }
 }
